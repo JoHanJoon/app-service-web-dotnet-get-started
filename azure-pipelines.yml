@@ -13,6 +13,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  #pfxPassword: $(PfxPassword) 
 
 steps:
 - task: NuGetToolInstaller@1
