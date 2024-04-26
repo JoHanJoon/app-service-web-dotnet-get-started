@@ -26,7 +26,8 @@ steps:
   inputs:
     solution: '$(solution)'
     #msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=path_to_pfx_file /p:CertPassword=$(pfxPassword) /p:PackageLocation="$(build.artifactStagingDirectory)"'
+    #msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=path_to_pfx_file /p:CertPassword=$(pfxPassword) /p:PackageLocation="$(build.artifactStagingDirectory)"'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:SignAssembly=true /p:CertPassword=$(pfxPassword) /p:PackageLocation="$(build.artifactStagingDirectory)"'
     #msbuildArgs: '/p:SignAssembly=true /p:AssemblyOriginatorKeyFile=path_to_pfx_file /p:CertPassword=$(pfxPassword)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
